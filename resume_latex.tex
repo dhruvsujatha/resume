@@ -1,0 +1,169 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{hyperref}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+\hypersetup{%
+    pdfborder = {0 0 0}
+}
+% END RESUME DEFINITIONS %
+
+\begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Dhruv Sujatha}}\\
+	\href{https://www.google.com/maps/place/West+Lafayette,+IN/}{West Lafayette, IN} $\cdot$ \href{mailto:dsujatha@purdue.edu}{dsujatha@purdue.edu} $\cdot$ (765) 746-9702 $\cdot$ \href{https://dsujatha.xyz}{dsujatha.xyz}\\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{Purdue University}\hfill \textit {West Lafayette, IN}\\
+Bachelor\textquotesingle{}s of Science - Computer Science \textit{GPA: 3.5} \hfill \textit {August 2021 - May 2025}\\
+\vspace{2mm}
+\textbf{Purdue University}\hfill \textit {West Lafayette, IN}\\
+Bachelor\textquotesingle{}s of Science - Data Science \textit{GPA: 3.5} \hfill \textit {August 2021 - May 2025}\\
+\vspace{2mm}
+
+%==== Professional Experience ====%
+\header{Professional Experience}
+\vspace{1mm}
+
+\textbf{Rosen Center for Advance Computing (ITaP)} \hfill \textit {West Lafayette, IN}\\
+\textit{Student High Performance Computing Engineer} \hfill \textit {January 2022 - Present}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Responsible for the maintenance of 9 supercomputing clusters, planning, inventorying, and deploying new clusters.
+	\item Currently working on deploying our newest research cluster, Negishi.
+	\item Gained valuable experience in developing tailored software for supercomputing clusters.
+\end{itemize}
+\begin{tabular}{ l l }
+    \underline{\textbf {Skills Developed:}} \href{https://www.python.org/}{Python}, \href{https://www.gnu.org/software/bash/}{Bash Scripting}, \href{https://docs.netbox.dev/en/stable/}{NetBox}, RESTful APIs, \href{https://xcat.org/}{xCAT}, \href{https://slurm.schedmd.com/overview.html}{SLURM}, \href{https://asana.com/}{Asana} 
+\end{tabular} \\ 
+\vspace{2mm}
+\textbf{Farfetch} \hfill \textit {West Lafayette, IN}\\
+\textit{Data Science Researcher} \hfill \textit {August 2021 - May 2022}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Worked with a team of students via The DataMine Learning Community to store, analyse, and interpret fashion data to develop a Deep Neural Network model to predict size and fit.
+	\item Deployed the finalized model on the cloud and setup pipelines and workflows for the upkeep of the model.
+	\item Gained valuable experience in the use of Agile Software Development methodologies and related tools such as Asana, Trello, and Jira.
+\end{itemize}
+\begin{tabular}{ l l }
+    \underline{\textbf {Skills Developed:}} \href{https://www.python.org/}{Python}, \href{https://www.tensorflow.org/}{Tensorflow}, \href{https://scikit-learn.org/stable/index.html}{Sci-Kit Learn}, \href{https://pandas.pydata.org/}{Pandas}, \href{https://www.mysql.com/}{MySQL}, \href{https://trello.com/}{Trello}, \href{https://jira.atlassian.com/}{Jira}
+\end{tabular} \\ 
+\vspace{2mm}
+
+%==== Other Experience ====%
+\header{Other Experience}
+{\textbf{Autonomous Robotics Club of Purdue}} \hfill \textit {West Lafayette, IN}\\
+\textit{Server Admin Team} 
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Part of the Server Administrator Team responsible for the upkeep of the technical stack used by all the projects at ARC.
+    \item Worked on deploying the infrastructure for the ARC website and the ARC Discord server using Docker.
+\end{itemize}
+\begin{tabular}{ l l }
+    \underline{\textbf {Skills Developed:}} \href{https://www.python.org/}{Python}, \href{https://www.gnu.org/software/bash/}{Bash Scripting}, \href{https://www.docsy.dev/}{Docsy}, \href{https://gohugo.io/about/what-is-hugo/}{Hugo}, \href{https://www.docker.com/}{Docker}, \href{https://www.proxmox.com/en/}{ProxMox}
+\end{tabular} \\
+\vspace{2mm}
+\textit{Piano Hand Project}
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Working with the software team to develop a firmware for a biomechanical hand which will be capable of playing the piano like a human being.
+\end{itemize}
+\begin{tabular}{ l l }
+    \underline{\textbf {Skills Developed:}} \href{https://cplusplus.com/}{C++}, \href{https://www.arduino.cc/}{Arduino}, \href{https://micropython.org/}{MicroPython}, \href{https://mosquitto.org/}{Mosquitto}
+\end{tabular} \\
+\vspace{2mm}
+\textbf{Quantum Game Club} \hfill \textit {West Lafayette, IN}\\
+\vspace{-1mm}
+\begin{itemize}
+    \item Learning the concepts of quantum mechanics and how it can be used in place of traditional computing. 
+    \item Using technologies such as Q\# and Qatalyst from Quantum Computing Inc. to build optimized quantum applications.
+\end{itemize}
+\begin{tabular}{ l l }
+    \underline {\textbf {Skills Developed:}} \href{https://github.com/microsoft/qsharp-language}{Q\#}, \href{https://www.quantum-computing.com/}{Qatalyst}, \href{https://azure.microsoft.com/en-us/services/quantum/}{Azure Quantum SDK}
+\end{tabular} \\
+\vspace*{2mm}
+
+\header{Certifications and Awards}
+\textbf{ASA Datafest 2022} \hfill \textit{American Statistical Association}\\
+\vspace {1mm}
+$\cdot$ Recognized by the American Statistical Association for my work in finding meaning \hfill \textit {March 2022}\\ from a large and complex data set to aid in data-driven decisions. \\
+\vspace{2mm}
+\textbf{AITP Computing Challenge Day 2022} \hfill \textit{Association of Information Technology Professionals}\\
+\vspace {1mm}
+$\cdot$ First in the \textit{ITaP Super Computing Challenge} where we had to optimize rendering of a \hfill \textit {April 2022}\\ simulation of our universe utilizing ffmpeg, OpenMPI, and Intel MPI. 
+\vspace{2mm}\\
+$\cdot$ First in the \textit{DataMine ML Challenge} where we had to derive the conditional probabilities\\ of target features in a dataset and visualize it as a graph.
+\vspace*{6.94mm}
+
+\centering Visit my Website at \href{https://dsujatha.xyz}{dsujatha.xyz} for more information.
+
+
+\end{document}
